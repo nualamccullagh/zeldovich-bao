@@ -2,6 +2,8 @@ import numpy as N
 
 sqrt2 = N.sqrt(2.)
 
+# This module computes the power spectrum and correlation function of a given 3d density grid
+
 # density is the configuration-space density grid (real-valued, shape = ngrid x ngrid x ngrid)
 # nkbins is the number of bins to compute the power spectrum in. It computes it in log-spaced bins in the range (2*Pi/L to Pi*ngrid / L)
 # deconvolve_cic if you want to deconvolve a cloud-in-cell window function

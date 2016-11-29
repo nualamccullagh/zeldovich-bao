@@ -1,7 +1,8 @@
 import numpy as N
 import scipy.interpolate as I
 
-
+# This is the main function of the program, it runs a Zeldovich realization to a given redshift
+# and returns the final density grid, and arrays of the particle positions (x, y, z)
 # redshift: float 
 # pkinit: array of [k, pk] for the initial power spectrum
 # boxsize: float (Mpc/h)

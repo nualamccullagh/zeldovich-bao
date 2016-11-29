@@ -4,7 +4,11 @@ import numpy as N
 import matplotlib.pyplot as plt
 import spatial_stats
 
-plt.style.use('nuala')
+
+# This shows how to use the code to run a Zeldovich simulation with the power spectrum in the directory
+# It takes a redshift as an input parameter, and an optional smoothing window parameter (default = 1 Mpc/h)
+# It uses a boxsize of 1Gpc/h and 128^3 particles and redshift-space distortion parameter f=0.5
+# computes the 1d and 2d correlation functions and plots both
 
 def test(redshift, smw=1.0):
 	pkinit=N.loadtxt('/gpfs/data/nmccull/pk_indra7313.txt')

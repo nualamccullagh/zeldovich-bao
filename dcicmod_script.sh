@@ -1,3 +1,4 @@
+
 #!/bin/bash
 gcc -I/usr/include/python2.6/ -fPIC -fopenmp -c cicdensmodule.c
 
