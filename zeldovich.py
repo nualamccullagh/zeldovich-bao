@@ -6,15 +6,15 @@ import scipy.interpolate as I
 # pkinit: array of [k, pk] for the initial power spectrum
 # boxsize: float (Mpc/h)
 # ngrid: integer
-def run(redshift, pkinit, boxsize=512.0, ngrid=512, nparticles=512, exactpk=True, smw=2.0):
+def run(redshift, pkinit, f, boxsize=512.0, ngrid=512, nparticles=512, exactpk=True, smw=2.0):
     
     #make initial Gaussian density field
     seed=314159
-    dens0=make_gauss_init(pkinit, boxsize=boxsize, ngrid=ngrid, seed=seed, exactpk=exactpk)
+    dens0=make_gauss_init(pkinit, boxsize=boxsize, ngrid=ngrid, seed=seed, exactpk=exactpk, smw=smw)
     #get displacements on the grid
     fx, fy, fz=get_disp(dens0, boxsize=boxsize, ngrid=ngrid)
     #get final positions of particles at a given redshift
-    x, y, z=get_pos(fx, fy, fz, redshift, boxsize=boxsize, ngrid=ngrid)
+    x, y, z=get_pos(fx, fy, fz*(1+f), redshift, boxsize=boxsize, ngrid=ngrid)
     
     return dens0, x, y, z
     
