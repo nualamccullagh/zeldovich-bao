@@ -8,3 +8,4 @@ Files:
 -spatial_stats.py: This module takes a density grid and computes the (1d) power spectrum, (1d and 2d) correlation function
 -pk_indra7313.txt: An example linear power spectrum (generated using CAMB for WMAP7 cosmology)
 -runZA.py: Script that shows how to run the above code and plot the resulting correlation function(s)
+-dcicmod_script.sh: shell script that compiles cicdensmodule.c into a shared object library that can be called in python. Location of Python libraries may have to be changed for different systems
