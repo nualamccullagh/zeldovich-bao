@@ -1,5 +1,7 @@
 # zeldovich-bao
-Code for running a Zel'dovich simulation, interpolating particles to a grid, and computing the 2pt-correlation function (in real and redshift space)
+The Zel'dovich approximation is a method used to set up the initial conditions of cosmological N-body simulations. It takes particles on a regular grid and moves them in a single time step so that the distribution of particles after they have been moved is close to Gaussian and has a specific power spectrum.
+
+This code sets up an initial 3D grid of a specified number of particles in a cubic box of specified size, and applies the Zel'dovich approximation using the given power spectrum (supplied in a text file). The output is the final distribution of particles at a specified redshift. Code is also supplied to interpolate final particle distribution to a density grid through cloud-in-cell (CIC) and to compute the 2-point correlation function of the density field. The Zel'dovich approximation can be applied in real-space or redshift-space.
 
 Files:
 
