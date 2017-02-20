@@ -11,7 +11,7 @@ import spatial_stats
 # computes the 1d and 2d correlation functions and plots both
 
 def test(redshift, smw=1.0):
-	pkinit=N.loadtxt('/gpfs/data/nmccull/pk_indra7313.txt')
+	pkinit=N.loadtxt('pk_indra7313.txt')
 	boxsize=1000.0
 	ngrid=128
 	

@@ -7,10 +7,9 @@ import scipy.interpolate as I
 # pkinit: array of [k, pk] for the initial power spectrum
 # boxsize: float (Mpc/h)
 # ngrid: integer
-def run(redshift, pkinit, f, boxsize=512.0, ngrid=512, nparticles=512, exactpk=True, smw=2.0):
+def run(redshift, pkinit, f=0.0, boxsize=512.0, ngrid=512, exactpk=True, smw=2.0, seed=314159):
     
     #make initial Gaussian density field
-    seed=314159
     dens0=make_gauss_init(pkinit, boxsize=boxsize, ngrid=ngrid, seed=seed, exactpk=exactpk, smw=smw)
     #get displacements on the grid
     fx, fy, fz=get_disp(dens0, boxsize=boxsize, ngrid=ngrid)
